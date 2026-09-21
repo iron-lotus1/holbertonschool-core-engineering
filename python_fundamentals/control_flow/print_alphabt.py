@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 
-text = ""
-for letter in "abcdefghijklmnopqrstuvwxyz":
-    if letter != "e" and letter != "q":
-        text += letter
-print("{}".format(text))
+while 1:
+    print("{value}".format(value="abcdfghijklmnoprstuvwxyz"), "\n")
+    break

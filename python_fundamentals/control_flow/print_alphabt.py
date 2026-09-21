@@ -4,4 +4,4 @@ text = ""
 for letter in "abcdefghijklmnopqrstuvwxyz":
     if letter != "e" and letter != "q":
         text += letter
-print(text)
+print("{}".format(text))

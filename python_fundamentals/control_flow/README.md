@@ -16,7 +16,7 @@ Allows you to embed Python expressions directly inside string literals using cur
 
 Python
 
-```
+```py
 name = "Alice"
 
 # Harder to read (string concatenation): 
@@ -32,7 +32,7 @@ Prints lowercase letters `a` through `z` while skipping the letters `e` (ASCII 1
 
 Python
 
-```
+```py
 for i in range(97, 123):
     if i != 101 and i != 113:
         print("{}".format(chr(i)), end="")
@@ -55,7 +55,7 @@ Loops through numbers `0` to `98` and prints their decimal and lowercase hexadec
 
 Python
 
-```
+```py
 for i in range(99):
     print("{} = 0x{:x}".format(i, i))
 ```
@@ -77,7 +77,7 @@ Prints numbers from `00` to `99` separated by commas, with no trailing comma aft
 
 Python
 
-```
+```py
 for i in range(100):
     if i < 99:
         print("{:02d}".format(i), end=", ")
@@ -105,7 +105,7 @@ for i in range(100):
 
 Python
 
-```
+```py
 for i in range(10):
     for j in range(i + 1, 10):
         if i == 8 and j == 9:
@@ -138,8 +138,6 @@ for i in range(10):
     
 
 ### Output
-
-Plaintext
 
 ```
 01, 02, 03, 04, 05, 06, 07, 08, 09, 12, 13, 14, 15, 16, 17, 18, 19, 23, 24, 25, 26, 27, 28, 29, 34, 35, 36, 37, 38, 39, 45, 46, 47, 48, 49, 56, 57, 58, 59, 67, 68, 69, 78, 79, 89

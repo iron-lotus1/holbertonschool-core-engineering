@@ -48,3 +48,18 @@ chr(i) Converts the ASCII integer back into its character representation (e.g. c
 end="": Overrides the default `print()` behavior (which adds a newline `\n` after every call) so that each character prints continuously on the same line.
 
 ```
+
+3. Hexadecimal Printing
+```py
+for i in range(99):
+# range(99) generates a sequence of numbers starting at 0 and ending at 98
+# for i in ... loops through each number one by one, assigning the current number to the variable i
+
+print("{} = 0x{:x}".format(i, i))
+# "{} = 0x{:x}" Template string containing 2 placeholders defined by {}
+# first {} inserts value passed to the .format() as a standard number
+# 0x prints as is
+# Second {:x} the :x is a format specifier. This coverts the value into lower hex number
+# .format(i, i) Takes the variable i twice and place it into two placeholders, first i goes in the {} and the 2nd i goes into {:x} 
+```
+

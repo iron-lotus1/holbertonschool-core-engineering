@@ -64,6 +64,7 @@ print("{} = 0x{:x}".format(i, i))
 ```
 
 4. [00...99](./print_comb2.py)
+
 ```py
 
 for i in range(100):
@@ -74,10 +75,11 @@ if i < 99:
 
 #This is a conditional statement checking if i is any number from 0 to 98.
 
-print(f"{i:02d}", end=", "):
-
-f"{i:02d}" 
-# An f-string that formats the integer `i`. The `:02d` modifier ensures the number is padded with a leading zero if it's a single digit (e.g., `0` becomes `00`, `9` becomes `09`).
+print({:02d}".format(i), end=", "):
+# This formats i to display a 2 digits long
+# d - is a decimal integer
+# 2 - sets the minimum width to 2 characters
+# 0 - Pads single-digit numbers with a leading zero instead of a blank space
       
 end=", " 
 # By default, Python's `print()` prints a newline at the end. Setting `end=", "` keeps all printed output on the same line, separated by a comma and a space.
@@ -86,8 +88,5 @@ end=", "
 else:
 # This block executes only on the final iteration when `i` reaches `99`.
 
-print(f"{i:02d}"):
-# Prints `99` formatted as a two-digit number. Because no `end=` parameter is provided, it uses the default newline, cleanly finishing the output line without leaving a comma at the end.
   
 ```
-

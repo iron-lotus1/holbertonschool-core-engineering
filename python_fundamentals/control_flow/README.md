@@ -3,7 +3,7 @@
 0. Positive anything is better than negative nothing
 
 
-1. The last digit
+1. [The last digit](./last_digit.py)
 ```py
 if - The first line of argument statment that checks for a TRUE value
 elif - The continous line after the if statment with other arguments.
@@ -24,7 +24,7 @@ print(f"Hello {name}!")
 ```
 
 
-2. Alphabet Game (Lowercase)
+2. [Alphabet Game] (./print_alphabt.py)
 ```py
 for i in range(97, 123): # generates a sequence of numbers from 97 to 122 (123 is exculded)
 
@@ -49,7 +49,7 @@ end="": Overrides the default `print()` behavior (which adds a newline `\n` afte
 
 ```
 
-3. Hexadecimal Printing
+3. [Hexadecimal Printing](./print_hexa.py)
 ```py
 for i in range(99):
 # range(99) generates a sequence of numbers starting at 0 and ending at 98
@@ -63,7 +63,7 @@ print("{} = 0x{:x}".format(i, i))
 # .format(i, i) Takes the variable i twice and place it into two placeholders, first i goes in the {} and the 2nd i goes into {:x} 
 ```
 
-4. 00...99
+4. [00...99](./print_comb2.py)
 ```py
 
 for i in range(100):

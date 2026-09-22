@@ -1,92 +1,148 @@
-## Control Flow
+## 1. Conditional Statements (`if`, `elif`, `else`)
 
-0. Positive anything is better than negative nothing
+Conditional statements allow your program to make decisions based on specific conditions.
 
+- **`if`**: Evaluates the first condition. If `True`, its code block runs.
+    
+- **`elif`**: Short for "else if". Evaluates additional conditions sequentially if all preceding `if` or `elif` checks were `False`.
+    
+- **`else`**: The default block that executes only if **all** preceding conditions evaluate to `False`.
+    
 
-1. [The last digit](./last_digit.py)
-```py
-if - The first line of argument statment that checks for a TRUE value
-elif - The continous line after the if statment with other arguments.
-else - if all statements are FALSE else will be executed
+## 2. String Formatting: f-strings vs. `.format()`
 
-f-strings
-allows you to embed Python variables or expressions directly inside a string using curly braces {}
-Python automatically replaces {variable_name} with its actual value when printing
+### f-strings (Modern & Readable)
 
+Allows you to embed Python expressions directly inside string literals using curly braces `{}`.
+
+Python
+
+```
 name = "Alice"
 
-# Using concatenation (harder to read): 
+# Harder to read (string concatenation): 
 print("Hello " + name + "!") 
 
-# Using an f-string (cleaner and easier to write): 
+# Cleaner and faster (f-string): 
 print(f"Hello {name}!")
-
 ```
 
+## 3. Printing the Alphabet (ASCII Conversion)
 
-2. [Alphabet Game] (./print_alphabt.py)
-```py
-for i in range(97, 123): # generates a sequence of numbers from 97 to 122 (123 is exculded)
+Prints lowercase letters `a` through `z` while skipping the letters `e` (ASCII 101) and `q` (ASCII 113).
 
-ASCII table: 
-			97 = a
-			122 = z
-for loop executes the block once for each value
-
-if i != 101 and i != 113:
-ASCII table: 
-			101 = e
-			122 = q
-!= this will exclude i and q
-
-print("{}".format(chr(i)), end="")
-
-chr(i) Converts the ASCII integer back into its character representation (e.g. chr(97) becomes a)
-
-"{}".format(...) Formats the character into a string using standard Python string formatting
-
-end="": Overrides the default `print()` behavior (which adds a newline `\n` after every call) so that each character prints continuously on the same line.
+Python
 
 ```
+for i in range(97, 123):
+    if i != 101 and i != 113:
+        print("{}".format(chr(i)), end="")
+```
 
-3. [Hexadecimal Printing](./print_hexa.py)
-```py
+### Breakdown:
+
+- **`range(97, 123)`**: Generates ASCII decimal numbers from `97` (`'a'`) up to `122` (`'z'`).
+    
+- **`i != 101 and i != 113`**: Excludes `'e'` (101) and `'q'` (113).
+    
+- **`chr(i)`**: Converts an ASCII integer back to its character equivalent (e.g., `chr(97)` $\rightarrow$ `'a'`).
+    
+- **`end=""`**: Overrides the default newline behavior (`\n`), printing characters continuously on a single line.
+    
+
+## 4. Hexadecimal Formatter
+
+Loops through numbers `0` to `98` and prints their decimal and lowercase hexadecimal values.
+
+Python
+
+```
 for i in range(99):
-# range(99) generates a sequence of numbers starting at 0 and ending at 98
-# for i in ... loops through each number one by one, assigning the current number to the variable i
-
-print("{} = 0x{:x}".format(i, i))
-# "{} = 0x{:x}" Template string containing 2 placeholders defined by {}
-# first {} inserts value passed to the .format() as a standard number
-# 0x prints as is
-# Second {:x} the :x is a format specifier. This coverts the value into lower hex number
-# .format(i, i) Takes the variable i twice and place it into two placeholders, first i goes in the {} and the 2nd i goes into {:x} 
+    print("{} = 0x{:x}".format(i, i))
 ```
 
-4. [00...99](./print_comb2.py)
+### Breakdown:
 
-```py
+- **`range(99)`**: Generates numbers from `0` to `98`.
+    
+- **`"{}"`**: First placeholder receives the standard decimal value `i`.
+    
+- **`"0x"`**: Literal string prefix for hexadecimal notation.
+    
+- **`"{:x}"`**: Format specifier converting the second value `i` into lowercase hexadecimal (e.g., `10` $\rightarrow$ `a`).
+    
 
+## 5. Number Formatting with Leading Zeros (`00`–`99`)
+
+Prints numbers from `00` to `99` separated by commas, with no trailing comma after `99`.
+
+Python
+
+```
 for i in range(100):
+    if i < 99:
+        print("{:02d}".format(i), end=", ")
+    else:
+        print("{:02d}".format(i))
+```
 
-#This creates a loop. The range(100) function generates numbers starting from 0 up to 99 (it stops right before 100). The loop runs 100 times, assigning the current number to the variable `i` on each iteration.
+### Breakdown:
 
-if i < 99:
+- **`range(100)`**: Loops 100 times, from `0` to `99`.
+    
+- **`{:02d}`**: Format specifier breakdown:
+    
+    - `d`: Decimal integer.
+        
+    - `2`: Minimum field width of 2 characters.
+        
+    - `0`: Pads single-digit numbers with a leading zero (e.g., `7` $\rightarrow$ `07`).
+        
+- **`end=", "`**: Replaces the standard newline with a comma and space to keep output on one line.
+    
+- **`else:`**: Executes only on the final iteration (`i = 99`) to print without a trailing comma.
 
-#This is a conditional statement checking if i is any number from 0 to 98.
 
-print({:02d}".format(i), end=", "):
-# This formats i to display a 2 digits long
-# d - is a decimal integer
-# 2 - sets the minimum width to 2 characters
-# 0 - Pads single-digit numbers with a leading zero instead of a blank space
-      
-end=", " 
-# By default, Python's `print()` prints a newline at the end. Setting `end=", "` keeps all printed output on the same line, separated by a comma and a space.
+Python
+
+```
+for i in range(10):
+    for j in range(i + 1, 10):
+        if i == 8 and j == 9:
+            print("{}{}".format(i, j))
+        else:
+            print("{}{}".format(i, j), end=", ")
+```
+
+### 1. Outer Loop (`for i in range(10)`)
+
+- Controls the **first digit** ($i$), which goes from `0` to `9`.
+    
+
+### 2. Inner Loop (`for j in range(i + 1, 10)`)
+
+- Controls the **second digit** ($j$).
+    
+- Starting `j` at `i + 1` satisfies two rules automatically:
+    
+    1. **Digits are different:** $j$ is strictly greater than $i$ ($i < j$), so pairs like `00` or `11` are never generated.
+        
+    2. **No repeated combinations:** Since $i$ is always smaller than $j$, combinations like `10` are skipped because `01` was already printed when $i=0$ and $j=1$.
         
 
-else:
-# This block executes only on the final iteration when `i` reaches `99`.
+### 3. Output Formatting (`if/else`)
 
-  
+- **`else` branch:** For all combinations except the last one, `print("{}{}".format(i, j), end=", ")` prints the two digits glued together followed by a comma and space `,` .
+    
+- **`if i == 8 and j == 9:` branch:** When the loop reaches the final combination (`89`), `print("{}{}".format(i, j))` prints without `end=", "`, ensuring there is no trailing comma at the end of the output.
+    
+
+### Output
+
+Plaintext
+
 ```
+01, 02, 03, 04, 05, 06, 07, 08, 09, 12, 13, 14
+```
+
+

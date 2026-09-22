@@ -63,3 +63,31 @@ print("{} = 0x{:x}".format(i, i))
 # .format(i, i) Takes the variable i twice and place it into two placeholders, first i goes in the {} and the 2nd i goes into {:x} 
 ```
 
+4. 00...99
+```py
+
+for i in range(100):
+
+#This creates a loop. The range(100) function generates numbers starting from 0 up to 99 (it stops right before 100). The loop runs 100 times, assigning the current number to the variable `i` on each iteration.
+
+if i < 99:
+
+#This is a conditional statement checking if i is any number from 0 to 98.
+
+print(f"{i:02d}", end=", "):
+
+f"{i:02d}" 
+# An f-string that formats the integer `i`. The `:02d` modifier ensures the number is padded with a leading zero if it's a single digit (e.g., `0` becomes `00`, `9` becomes `09`).
+      
+end=", " 
+# By default, Python's `print()` prints a newline at the end. Setting `end=", "` keeps all printed output on the same line, separated by a comma and a space.
+        
+
+else:
+# This block executes only on the final iteration when `i` reaches `99`.
+
+print(f"{i:02d}"):
+# Prints `99` formatted as a two-digit number. Because no `end=` parameter is provided, it uses the default newline, cleanly finishing the output line without leaving a comma at the end.
+  
+```
+

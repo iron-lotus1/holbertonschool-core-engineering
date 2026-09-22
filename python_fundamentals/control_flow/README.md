@@ -1,4 +1,5 @@
-## 1. Conditional Statements (`if`, `elif`, `else`)
+## 1. [The Last digit](./last_digit.py) (`if`, `elif`, `else`)
+
 
 Conditional statements allow your program to make decisions based on specific conditions.
 
@@ -8,8 +9,6 @@ Conditional statements allow your program to make decisions based on specific co
     
 - **`else`**: The default block that executes only if **all** preceding conditions evaluate to `False`.
     
-
-## 2. String Formatting: f-strings vs. `.format()`
 
 ### f-strings (Modern & Readable)
 
@@ -27,7 +26,7 @@ print("Hello " + name + "!")
 print(f"Hello {name}!")
 ```
 
-## 3. Printing the Alphabet (ASCII Conversion)
+## 2. [Alphabet Game](./print_alphabt.py)
 
 Prints lowercase letters `a` through `z` while skipping the letters `e` (ASCII 101) and `q` (ASCII 113).
 
@@ -50,7 +49,7 @@ for i in range(97, 123):
 - **`end=""`**: Overrides the default newline behavior (`\n`), printing characters continuously on a single line.
     
 
-## 4. Hexadecimal Formatter
+## 3. [Hexadecimal Printing](./print_hexa.py)
 
 Loops through numbers `0` to `98` and prints their decimal and lowercase hexadecimal values.
 
@@ -72,7 +71,7 @@ for i in range(99):
 - **`"{:x}"`**: Format specifier converting the second value `i` into lowercase hexadecimal (e.g., `10` $\rightarrow$ `a`).
     
 
-## 5. Number Formatting with Leading Zeros (`00`–`99`)
+## 4. [Number Formatting with Leading Zeros (`00`–`99`)](./print_comb2.py)
 
 Prints numbers from `00` to `99` separated by commas, with no trailing comma after `99`.
 
@@ -102,6 +101,7 @@ for i in range(100):
     
 - **`else:`**: Executes only on the final iteration (`i = 99`) to print without a trailing comma.
 
+## 5. Combination of Two Digits 
 
 Python
 

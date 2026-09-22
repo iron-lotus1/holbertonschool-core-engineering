@@ -101,7 +101,7 @@ for i in range(100):
     
 - **`else:`**: Executes only on the final iteration (`i = 99`) to print without a trailing comma.
 
-## 5. Combination of Two Digits 
+## 5. [Combination of Two Digits](./print_comb3.py)
 
 Python
 

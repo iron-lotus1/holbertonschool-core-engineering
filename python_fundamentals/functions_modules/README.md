@@ -174,3 +174,35 @@ Formatted integers: {:d} explicitly tells Python to format the values as decimal
 
 ## 7.[Everything Can Be Imported](./variable_load.py)
 
+```py
+from variable_load_5 import a
+```
+
+What it does: Opens a separate Python file in the same directory named variable_load_5.py and imports the variable named a.
+
+Why do it this way? Instead of re-writing data or code across multiple files, Python allows you to share variables, functions, and classes across scripts.
+
+```py
+if __name__ == "__main__":
+```
+- What it does: Checks whether this specific file is being run directly by you (the user) or if it's being imported by another file.
+
+- How it works behind the scenes:
+
+    - When you run a script directly from your terminal (python3 script.py), Python automatically sets a special hidden variable called __name__ to the value "__main__".
+
+        - If another script imports this file (import script), Python sets __name__ to "script" instead.
+
+- Why it matters: It acts as a protective shield. Any code indented under this if block will only execute when you run this script directly—preventing it from accidentally executing if someone imports this script elsewhere.
+
+```py
+print("{}".format(a))
+```
+
+- What it does: Prints the value of the variable a to the terminal console.
+
+- The string format method (.format()):
+
+    - {} acts as a placeholder inside the text string.
+
+    - .format(a) takes whatever value is stored inside a and injects it directly into that placeholder.

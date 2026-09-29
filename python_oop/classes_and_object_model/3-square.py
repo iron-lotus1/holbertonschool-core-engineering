@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-
 """Module that defines a Square class."""
 
 
 class Square:
-    """Defines a square by its size with type/value 
-    validation and area computation."""
+    """Defines a square by its size with type/value validation
+    and area computation.
+    """
 
     def __init__(self, size=0):
         """Initialize a new Square instance.

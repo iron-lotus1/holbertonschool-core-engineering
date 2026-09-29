@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
-
 """Module that defines a Square class."""
 
 
 class Square:
-    """Defines a square by its size and position with properties and printing capabilities."""
+    """Defines a square by its size and position with properties and printing.
+    """
 
     def __init__(self, size=0, position=(0, 0)):
         """Initialize a new Square instance.
 
         Args:
             size (int): The side length of the square. Defaults to 0.
-            position (tuple): Offset (x, y) coordinates for printing. Defaults to (0, 0).
+            position (tuple): Offset (x, y) coordinates for printing.
         """
         self.size = size
         self.position = position
@@ -58,8 +58,14 @@ class Square:
         return self.__size ** 2
 
     def my_print(self):
-        """Print the square in stdout using the '#' character and position offset."""
-        print(self.__str__(), end="" if self.__size == 0 else "\n")
+        """Print the square in stdout using the '#' character and position."""
+        if self.__size == 0:
+            print()
+            return
+
+        print("\n" * self.__position[1], end="")
+        for _ in range(self.__size):
+            print(" " * self.__position[0] + "#" * self.__size)
 
     def __str__(self):
         """Return the string representation of the square for printing."""
@@ -67,10 +73,9 @@ class Square:
             return ""
 
         res = []
-        # Print vertical offset (newlines)
-        res.append("\n" * self.__position[1])
+        if self.__position[1] > 0:
+            res.append("\n" * (self.__position[1] - 1))
 
-        # Print horizontal offset (spaces) followed by '#' characters
         for _ in range(self.__size):
             res.append(" " * self.__position[0] + "#" * self.__size)
 

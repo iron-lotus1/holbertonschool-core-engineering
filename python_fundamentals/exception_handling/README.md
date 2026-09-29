@@ -28,7 +28,8 @@ Here is how common exception-handling patterns work in this directory:
 
 **Concept:** Catching out-of-bounds access safely.
 
-```python
+```py
+python
 def safe_print_list(my_list=[], x=0):
     """Prints x elements of a list safely."""
     count = 0
@@ -41,6 +42,7 @@ def safe_print_list(my_list=[], x=0):
             break
     print("")  # New line
     return count
+```
 💡 Why this matters: If x is larger than the length of my_list, accessing my_list[i] normally crashes with an IndexError. The try-except IndexError block intercepts the error and lets the loop stop cleanly.
 
 2. Type Verification (TypeError & ValueError)

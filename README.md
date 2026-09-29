@@ -16,6 +16,7 @@ holbertonschool-core-engineering/
     ├── hello_world/
     ├── control_flow/
     └── [future_modules...]/
+```
 🗺️ Module Overview
 1. python_fundamentals/
 The main entry point for Python programming concepts. This directory is broken down into thematic modules:

@@ -1,9 +1,5 @@
 #!/usr/bin/env python3
 
-Here is the updated Square class with the area() public instance method added.
-
-Python
-#!/usr/bin/env python3
 """Module that defines a Square class."""
 
 

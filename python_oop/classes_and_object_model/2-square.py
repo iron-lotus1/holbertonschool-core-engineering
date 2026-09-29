@@ -1,9 +1,5 @@
 #!/usr/bin/env python3
 
-Here is the updated Square class with type and value validation for size, along with a default value of 0 to handle optional instantiation.
-
-Python
-#!/usr/bin/env python3
 """Module that defines a Square class."""
 
 

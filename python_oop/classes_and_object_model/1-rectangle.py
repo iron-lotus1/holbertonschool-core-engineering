@@ -4,7 +4,8 @@
 
 
 class Rectangle:
-    """Defines a rectangle by its width and height with type and value validation."""
+    """Defines a rectangle by its width and height
+    with type and value validation."""
 
     def __init__(self, width=0, height=0):
         """Initialize a new Rectangle instance.

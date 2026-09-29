@@ -46,6 +46,7 @@ def safe_print_list(my_list=[], x=0):
 2. Type Verification (TypeError & ValueError)
 Concept: Checking if an input is valid before operating on it.
 
+```py
 Python
 def safe_print_integer(value):
     """Prints an integer with "{:d}".format()."""
@@ -54,11 +55,13 @@ def safe_print_integer(value):
         return True
     except (ValueError, TypeError):
         return False
+```
 💡 Why this matters: Passing a string like "hello" into "{:d}".format() triggers a ValueError or TypeError. The except (ValueError, TypeError): block catches either error and returns False instead of terminating the script.
 
 3. Division & Cleanup (ZeroDivisionError + finally)
 Concept: Handling math errors and ensuring cleanup actions always run.
 
+```py
 Python
 def safe_print_division(a, b):
     """Divides 2 integers and prints the result."""
@@ -70,13 +73,16 @@ def safe_print_division(a, b):
     finally:
         print("Inside result: {}".format(result))
     return result
+```
 💡 Why this matters: Dividing by zero is mathematically undefined and throws a ZeroDivisionError. Using finally guarantees that Inside result: ... is printed whether division succeeded or failed.
 
 4. Raising Custom Exceptions (raise)
 Concept: Forcing an error when constraints are violated.
 
+```py
 Python
 def raise_exception():
     """Raises a TypeError exception deliberately."""
     raise TypeError("Custom error message")
+```
 💡 Why this matters: raise allows you to stop execution when an invalid condition occurs in your own logic and send a message up to whichever part of the program called the function.

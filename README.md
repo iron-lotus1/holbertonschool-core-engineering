@@ -1,8 +1,3 @@
-Here is an updated `README.md` that incorporates your new modules—`python_fundamentals`, `python_oop`, `uml_intro`, and `python_advanced`—while matching the exact tone, layout, structure, and style of your original README!
-
----
-
-```markdown
 # Holberton School - Core Engineering 🛠️ Python Curriculum
 
 Welcome to my **Core Engineering** repository! This repository tracks my journey through Holberton School's software engineering curriculum, focusing on building strong core programming skills, problem-solving techniques, and best practices in Python—from absolute fundamentals to object-oriented programming, UML modeling, and advanced language features.
@@ -130,6 +125,4 @@ All Python scripts in this repository strictly adhere to:
 * **Style Standard:** PEP 8 style guidelines (4 spaces per indentation level, proper file headers, and clean docstrings).
 * **Executability:** All `.py` files begin with `#!/usr/bin/python3` and have executable permissions (`chmod +x`).
 
-```
 
-```

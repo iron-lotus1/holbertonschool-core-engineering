@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-
 """function that writes a string to a text file"""
+
 
 def write_file(filename="", text=""):
     """Write a string to a UTF-8 file and return the number
